@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript Calculator</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div class="container">
+			<form name="form">
+			<div class="display">
+				<input type="text" placeholder="0" name="displayResult" />
+			</div>
+				<div class="buttons">
+				  <div class="row">
+					  <input type="button" name="7" value="7" onClick="calculate(7)">
+					  <input type="button" name="8" value="8" onClick="calculate(8)">
+					  <input type="button" name="9" value="9" onClick="calculate(9)">
+					  <input type="button" name="addition" value="+" onClick="calculate(addition.value)">
+					</div>
+
+					<div class="row">
+					  <input type="button" name="4" value="4" onClick="calculate(4)">
+					  <input type="button" name="5" value="5" onClick="calculate(5)">
+					  <input type="button" name="6" value="6" onClick="calculate(6)">
+					  <input type="button" name="subtract" value="-" onClick="calculate(subtract.value)">
+					</div>
+
+					<div class="row">
+					  <input type="button" name="1" value="1" onClick="calculate(1)">
+					  <input type="button" name="2" value="2" onClick="calculate(2)">
+					  <input type="button" name="3" value="3" onClick="calculate(3)">
+					  <input type="button" name="mult" value="*" onClick="calculate(mult.value)">
+					</div>
+
+					<div class="row">
+					  <input type="button" name="0" value="0" onClick="calculate(0)">
+					  <input type="button" name="decimal" value="." onClick="calculate(decimal.value)">
+					  <input type="button" name="divide" value="/" onClick="calculate(divide.value)">
+					  <input type="button" class="blue" value="=" onClick="displayResult.value=eval(displayResult.value)">
+					</div>
+
+          <div class="row">
+					<input type="button" name="clear" value="C" onClick="this.form.reset()">
+					</div>
+
+				</div>
+
+			</form>
+		</div>
+		<script>
+		function calculate(input){
+			form.displayResult.value=form.displayResult.value+input;
+		}
+		</script>
+	</body>
+
+</html>
